@@ -1,0 +1,823 @@
+TimeQuest Timing Analyzer report for Practical3
+Sun Mar 31 13:33:52 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'CLOCK'
+ 12. Hold: 'CLOCK'
+ 13. Minimum Pulse Width: 'CLOCK'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Setup Transfers
+ 21. Hold Transfers
+ 22. Report TCCS
+ 23. Report RSKM
+ 24. Unconstrained Paths
+ 25. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name      ; Practical3                                         ;
+; Device Family      ; MAX II                                             ;
+; Device Name        ; EPM240T100C3                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Slow Model                                         ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 14          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-20        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; CLOCK      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++--------------------------------------------------+
+; Fmax Summary                                     ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 231.32 MHz ; 231.32 MHz      ; CLOCK      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Setup Summary                  ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLOCK ; -3.323 ; -60.953       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Hold Summary                  ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLOCK ; 0.865 ; 0.000         ;
++-------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------+
+; Minimum Pulse Width Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLOCK ; -2.289 ; -2.289        ;
++-------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'CLOCK'                                                                                                                                                                                                                                                                                             ;
++--------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                    ; To Node                                                                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.323 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.115      ;
+; -3.215 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst7                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.007      ;
+; -3.180 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.972      ;
+; -3.155 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.947      ;
+; -3.121 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.913      ;
+; -3.093 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst7                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.885      ;
+; -3.089 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.881      ;
+; -3.000 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst7                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.792      ;
+; -2.987 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.779      ;
+; -2.946 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.738      ;
+; -2.921 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.713      ;
+; -2.906 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.698      ;
+; -2.884 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.676      ;
+; -2.844 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.636      ;
+; -2.828 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.620      ;
+; -2.825 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.617      ;
+; -2.819 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.611      ;
+; -2.785 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.577      ;
+; -2.764 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst7                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.556      ;
+; -2.763 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.555      ;
+; -2.738 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.530      ;
+; -2.738 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.530      ;
+; -2.735 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.527      ;
+; -2.708 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.500      ;
+; -2.704 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.496      ;
+; -2.700 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst2                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.492      ;
+; -2.699 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.491      ;
+; -2.698 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst1                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.490      ;
+; -2.685 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.477      ;
+; -2.682 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.474      ;
+; -2.674 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.466      ;
+; -2.674 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.466      ;
+; -2.670 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.462      ;
+; -2.660 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.452      ;
+; -2.652 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst3                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.444      ;
+; -2.646 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst4                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.438      ;
+; -2.638 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst5                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.430      ;
+; -2.626 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.418      ;
+; -2.592 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.384      ;
+; -2.586 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.378      ;
+; -2.579 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.371      ;
+; -2.579 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.371      ;
+; -2.578 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst2                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.370      ;
+; -2.577 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.369      ;
+; -2.577 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.369      ;
+; -2.576 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst1                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.368      ;
+; -2.572 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.364      ;
+; -2.570 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.362      ;
+; -2.567 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.359      ;
+; -2.552 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.344      ;
+; -2.552 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.344      ;
+; -2.548 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.340      ;
+; -2.548 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.340      ;
+; -2.530 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst3                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.322      ;
+; -2.524 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst4                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.316      ;
+; -2.516 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst5                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.308      ;
+; -2.493 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.285      ;
+; -2.489 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.281      ;
+; -2.487 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.279      ;
+; -2.485 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst2                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.277      ;
+; -2.484 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.276      ;
+; -2.483 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst1                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.275      ;
+; -2.467 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.259      ;
+; -2.459 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.251      ;
+; -2.459 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.251      ;
+; -2.457 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.249      ;
+; -2.457 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.249      ;
+; -2.455 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.247      ;
+; -2.455 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.247      ;
+; -2.450 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.242      ;
+; -2.448 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.240      ;
+; -2.437 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst3                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.229      ;
+; -2.431 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst4                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.223      ;
+; -2.423 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst5                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.215      ;
+; -2.402 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.194      ;
+; -2.396 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.188      ;
+; -2.389 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.181      ;
+; -2.364 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.156      ;
+; -2.364 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.156      ;
+; -2.362 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.154      ;
+; -2.357 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.149      ;
+; -2.355 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.147      ;
+; -2.336 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.128      ;
+; -2.321 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.113      ;
+; -2.307 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; lpm_mux9:inst6|lpm_mux:LPM_MUX_component|mux_67e:auto_generated|external_latency_ffsa[0]                     ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.099      ;
+; -2.296 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.088      ;
+; -2.257 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.049      ;
+; -2.249 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst2                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.041      ;
+; -2.248 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.040      ;
+; -2.247 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst1                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.039      ;
+; -2.223 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.015      ;
+; -2.223 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.015      ;
+; -2.219 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.011      ;
+; -2.201 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst3                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.993      ;
+; -2.195 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst4                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.987      ;
+; -2.187 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst5                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.979      ;
+; -2.186 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; lpm_mux9:inst6|lpm_mux:LPM_MUX_component|mux_67e:auto_generated|external_latency_ffsa[0]                     ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.978      ;
+; -2.170 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.962      ;
+; -2.141 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.933      ;
+; -2.141 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.933      ;
++--------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'CLOCK'                                                                                                                                                                                                                                                                                             ;
++-------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                                    ; To Node                                                                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.865 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst2                       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe19                                      ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.003      ;
+; 0.883 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst4                       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe11                                      ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.021      ;
+; 0.889 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst3                       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe15                                      ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.027      ;
+; 1.053 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.191      ;
+; 1.113 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst1                       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe23                                      ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.251      ;
+; 1.125 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst                        ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe27                                      ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.263      ;
+; 1.186 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst5                       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe7                                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.324      ;
+; 1.220 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst3                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst4                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.358      ;
+; 1.324 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst1                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst2                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.462      ;
+; 1.339 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.477      ;
+; 1.395 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.533      ;
+; 1.395 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.533      ;
+; 1.402 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.540      ;
+; 1.403 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.541      ;
+; 1.406 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.544      ;
+; 1.411 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.549      ;
+; 1.425 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.563      ;
+; 1.427 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.565      ;
+; 1.546 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst7                        ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe31                                      ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.684      ;
+; 1.581 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst4                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst5                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.719      ;
+; 1.586 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.724      ;
+; 1.637 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.775      ;
+; 1.808 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst2                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst3                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.946      ;
+; 1.859 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.997      ;
+; 1.914 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe3                                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.052      ;
+; 1.970 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst1                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.108      ;
+; 2.006 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst7                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.144      ;
+; 2.013 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.151      ;
+; 2.015 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.153      ;
+; 2.021 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst7                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.159      ;
+; 2.082 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.220      ;
+; 2.084 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.222      ;
+; 2.139 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.277      ;
+; 2.146 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.284      ;
+; 2.151 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.289      ;
+; 2.344 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.482      ;
+; 2.344 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.482      ;
+; 2.344 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.482      ;
+; 2.353 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.491      ;
+; 2.360 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.498      ;
+; 2.428 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.566      ;
+; 2.430 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.568      ;
+; 2.434 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst5                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.572      ;
+; 2.437 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.575      ;
+; 2.438 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst7                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.576      ;
+; 2.438 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.576      ;
+; 2.439 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.577      ;
+; 2.510 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; lpm_mux9:inst6|lpm_mux:LPM_MUX_component|mux_67e:auto_generated|external_latency_ffsa[0]                     ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.648      ;
+; 2.642 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.780      ;
+; 2.644 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.782      ;
+; 2.651 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.789      ;
+; 2.652 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst7                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.790      ;
+; 2.652 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.790      ;
+; 2.653 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.791      ;
+; 2.674 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.812      ;
+; 2.674 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.812      ;
+; 2.747 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; lpm_mux9:inst6|lpm_mux:LPM_MUX_component|mux_67e:auto_generated|external_latency_ffsa[0]                     ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.885      ;
+; 2.773 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.911      ;
+; 2.775 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.913      ;
+; 2.780 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.918      ;
+; 2.782 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.920      ;
+; 2.782 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.920      ;
+; 2.795 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.933      ;
+; 2.840 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; lpm_mux9:inst6|lpm_mux:LPM_MUX_component|mux_67e:auto_generated|external_latency_ffsa[0]                     ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.978      ;
+; 2.841 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst5                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.979      ;
+; 2.849 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst4                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.987      ;
+; 2.855 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst3                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.993      ;
+; 2.873 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.011      ;
+; 2.877 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.015      ;
+; 2.877 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.015      ;
+; 2.901 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst1                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.039      ;
+; 2.902 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.040      ;
+; 2.903 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst2                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.041      ;
+; 2.911 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.049      ;
+; 2.940 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.078      ;
+; 2.961 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ; lpm_mux9:inst6|lpm_mux:LPM_MUX_component|mux_67e:auto_generated|external_latency_ffsa[0]                     ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.099      ;
+; 2.965 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.103      ;
+; 3.009 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.147      ;
+; 3.011 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.149      ;
+; 3.016 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.154      ;
+; 3.018 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.156      ;
+; 3.018 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.156      ;
+; 3.025 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.163      ;
+; 3.032 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.170      ;
+; 3.038 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.176      ;
+; 3.077 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst5                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.215      ;
+; 3.085 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst4                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.223      ;
+; 3.091 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst3                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.229      ;
+; 3.095 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.233      ;
+; 3.102 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.240      ;
+; 3.104 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.242      ;
+; 3.109 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.247      ;
+; 3.109 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.247      ;
+; 3.111 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.249      ;
+; 3.111 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.249      ;
+; 3.113 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.251      ;
+; 3.113 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.251      ;
+; 3.131 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.269      ;
+; 3.133 ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.271      ;
+; 3.137 ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst1                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.275      ;
++-------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width: 'CLOCK'                                                                                                                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------------------+
+; -2.289 ; 1.000        ; 3.289          ; Port Rate        ; CLOCK ; Rise       ; CLOCK                                                                                                        ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst                        ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst                        ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst1                       ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst1                       ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst2                       ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst2                       ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst3                       ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst3                       ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst4                       ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst4                       ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst5                       ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst5                       ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst6                       ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst1|inst7                       ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst                         ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst1                        ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst2                        ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst3                        ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst4                        ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst5                        ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst6                        ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst7                        ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|Register17bit:inst6|Register16bit:inst|Register8bit:inst|inst7                        ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[0] ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[1] ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[2] ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_sai:auto_generated|safe_q[3] ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe10                                      ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe10                                      ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe11                                      ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe11                                      ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe14                                      ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe14                                      ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe15                                      ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe15                                      ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe18                                      ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe18                                      ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe19                                      ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe19                                      ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe1a[2]                                   ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe1a[2]                                   ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe1a[3]                                   ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe1a[3]                                   ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe2                                       ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe2                                       ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe22                                      ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe22                                      ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe23                                      ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe23                                      ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe26                                      ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe26                                      ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe27                                      ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe27                                      ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe3                                       ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe3                                       ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe30                                      ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe30                                      ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe31                                      ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe31                                      ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe6                                       ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe6                                       ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe7                                       ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux1:inst19|lpm_mux:LPM_MUX_component|mux_iqe:auto_generated|dffe7                                       ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux8:inst5|lpm_mux:LPM_MUX_component|mux_u8e:auto_generated|dffe3                                        ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux8:inst5|lpm_mux:LPM_MUX_component|mux_u8e:auto_generated|dffe3                                        ;
+; 0.334  ; 0.500        ; 0.166          ; High Pulse Width ; CLOCK ; Rise       ; lpm_mux9:inst6|lpm_mux:LPM_MUX_component|mux_67e:auto_generated|external_latency_ffsa[0]                     ;
+; 0.334  ; 0.500        ; 0.166          ; Low Pulse Width  ; CLOCK ; Rise       ; lpm_mux9:inst6|lpm_mux:LPM_MUX_component|mux_67e:auto_generated|external_latency_ffsa[0]                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK|combout                                                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK|combout                                                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe10|clk                                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe10|clk                                                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe11|clk                                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe11|clk                                                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe14|clk                                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe14|clk                                                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe15|clk                                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe15|clk                                                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe18|clk                                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe18|clk                                                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe19|clk                                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe19|clk                                                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe1a[2]|clk                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe1a[2]|clk                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe1a[3]|clk                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe1a[3]|clk                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; inst19|LPM_MUX_component|auto_generated|dffe22|clk                                                           ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; A[*]       ; CLOCK      ; 8.053 ; 8.053 ; Rise       ; CLOCK           ;
+;  A[0]      ; CLOCK      ; 7.717 ; 7.717 ; Rise       ; CLOCK           ;
+;  A[1]      ; CLOCK      ; 8.053 ; 8.053 ; Rise       ; CLOCK           ;
+;  A[2]      ; CLOCK      ; 5.923 ; 5.923 ; Rise       ; CLOCK           ;
+;  A[3]      ; CLOCK      ; 4.584 ; 4.584 ; Rise       ; CLOCK           ;
+;  A[4]      ; CLOCK      ; 4.650 ; 4.650 ; Rise       ; CLOCK           ;
+;  A[5]      ; CLOCK      ; 4.701 ; 4.701 ; Rise       ; CLOCK           ;
+;  A[6]      ; CLOCK      ; 5.112 ; 5.112 ; Rise       ; CLOCK           ;
+;  A[7]      ; CLOCK      ; 5.606 ; 5.606 ; Rise       ; CLOCK           ;
+; B[*]       ; CLOCK      ; 8.100 ; 8.100 ; Rise       ; CLOCK           ;
+;  B[0]      ; CLOCK      ; 8.100 ; 8.100 ; Rise       ; CLOCK           ;
+;  B[1]      ; CLOCK      ; 7.991 ; 7.991 ; Rise       ; CLOCK           ;
+;  B[2]      ; CLOCK      ; 6.069 ; 6.069 ; Rise       ; CLOCK           ;
+;  B[3]      ; CLOCK      ; 5.185 ; 5.185 ; Rise       ; CLOCK           ;
+;  B[4]      ; CLOCK      ; 5.073 ; 5.073 ; Rise       ; CLOCK           ;
+;  B[5]      ; CLOCK      ; 4.775 ; 4.775 ; Rise       ; CLOCK           ;
+;  B[6]      ; CLOCK      ; 5.032 ; 5.032 ; Rise       ; CLOCK           ;
+;  B[7]      ; CLOCK      ; 5.806 ; 5.806 ; Rise       ; CLOCK           ;
+; ENABLE     ; CLOCK      ; 4.838 ; 4.838 ; Rise       ; CLOCK           ;
+; OPCODE[*]  ; CLOCK      ; 5.153 ; 5.153 ; Rise       ; CLOCK           ;
+;  OPCODE[0] ; CLOCK      ; 5.070 ; 5.070 ; Rise       ; CLOCK           ;
+;  OPCODE[1] ; CLOCK      ; 5.153 ; 5.153 ; Rise       ; CLOCK           ;
+;  OPCODE[2] ; CLOCK      ; 3.903 ; 3.903 ; Rise       ; CLOCK           ;
+;  OPCODE[3] ; CLOCK      ; 4.743 ; 4.743 ; Rise       ; CLOCK           ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; A[*]       ; CLOCK      ; -1.214 ; -1.214 ; Rise       ; CLOCK           ;
+;  A[0]      ; CLOCK      ; -1.695 ; -1.695 ; Rise       ; CLOCK           ;
+;  A[1]      ; CLOCK      ; -1.627 ; -1.627 ; Rise       ; CLOCK           ;
+;  A[2]      ; CLOCK      ; -1.583 ; -1.583 ; Rise       ; CLOCK           ;
+;  A[3]      ; CLOCK      ; -1.807 ; -1.807 ; Rise       ; CLOCK           ;
+;  A[4]      ; CLOCK      ; -1.414 ; -1.414 ; Rise       ; CLOCK           ;
+;  A[5]      ; CLOCK      ; -1.769 ; -1.769 ; Rise       ; CLOCK           ;
+;  A[6]      ; CLOCK      ; -1.620 ; -1.620 ; Rise       ; CLOCK           ;
+;  A[7]      ; CLOCK      ; -1.214 ; -1.214 ; Rise       ; CLOCK           ;
+; B[*]       ; CLOCK      ; -1.728 ; -1.728 ; Rise       ; CLOCK           ;
+;  B[0]      ; CLOCK      ; -1.877 ; -1.877 ; Rise       ; CLOCK           ;
+;  B[1]      ; CLOCK      ; -1.978 ; -1.978 ; Rise       ; CLOCK           ;
+;  B[2]      ; CLOCK      ; -1.728 ; -1.728 ; Rise       ; CLOCK           ;
+;  B[3]      ; CLOCK      ; -1.885 ; -1.885 ; Rise       ; CLOCK           ;
+;  B[4]      ; CLOCK      ; -2.408 ; -2.408 ; Rise       ; CLOCK           ;
+;  B[5]      ; CLOCK      ; -2.273 ; -2.273 ; Rise       ; CLOCK           ;
+;  B[6]      ; CLOCK      ; -2.087 ; -2.087 ; Rise       ; CLOCK           ;
+;  B[7]      ; CLOCK      ; -2.659 ; -2.659 ; Rise       ; CLOCK           ;
+; ENABLE     ; CLOCK      ; -2.894 ; -2.894 ; Rise       ; CLOCK           ;
+; OPCODE[*]  ; CLOCK      ; -1.220 ; -1.220 ; Rise       ; CLOCK           ;
+;  OPCODE[0] ; CLOCK      ; -2.178 ; -2.178 ; Rise       ; CLOCK           ;
+;  OPCODE[1] ; CLOCK      ; -1.556 ; -1.556 ; Rise       ; CLOCK           ;
+;  OPCODE[2] ; CLOCK      ; -1.220 ; -1.220 ; Rise       ; CLOCK           ;
+;  OPCODE[3] ; CLOCK      ; -1.229 ; -1.229 ; Rise       ; CLOCK           ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; OUT[*]    ; CLOCK      ; 7.013 ; 7.013 ; Rise       ; CLOCK           ;
+;  OUT[0]   ; CLOCK      ; 7.013 ; 7.013 ; Rise       ; CLOCK           ;
+;  OUT[1]   ; CLOCK      ; 6.148 ; 6.148 ; Rise       ; CLOCK           ;
+;  OUT[2]   ; CLOCK      ; 6.945 ; 6.945 ; Rise       ; CLOCK           ;
+;  OUT[3]   ; CLOCK      ; 6.946 ; 6.946 ; Rise       ; CLOCK           ;
+;  OUT[4]   ; CLOCK      ; 6.986 ; 6.986 ; Rise       ; CLOCK           ;
+;  OUT[5]   ; CLOCK      ; 6.527 ; 6.527 ; Rise       ; CLOCK           ;
+;  OUT[6]   ; CLOCK      ; 6.698 ; 6.698 ; Rise       ; CLOCK           ;
+;  OUT[7]   ; CLOCK      ; 6.710 ; 6.710 ; Rise       ; CLOCK           ;
+; READY     ; CLOCK      ; 4.940 ; 4.940 ; Rise       ; CLOCK           ;
+; ZERO      ; CLOCK      ; 6.571 ; 6.571 ; Rise       ; CLOCK           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; OUT[*]    ; CLOCK      ; 5.264 ; 5.264 ; Rise       ; CLOCK           ;
+;  OUT[0]   ; CLOCK      ; 5.575 ; 5.575 ; Rise       ; CLOCK           ;
+;  OUT[1]   ; CLOCK      ; 5.811 ; 5.811 ; Rise       ; CLOCK           ;
+;  OUT[2]   ; CLOCK      ; 5.586 ; 5.586 ; Rise       ; CLOCK           ;
+;  OUT[3]   ; CLOCK      ; 5.911 ; 5.911 ; Rise       ; CLOCK           ;
+;  OUT[4]   ; CLOCK      ; 5.575 ; 5.575 ; Rise       ; CLOCK           ;
+;  OUT[5]   ; CLOCK      ; 5.590 ; 5.590 ; Rise       ; CLOCK           ;
+;  OUT[6]   ; CLOCK      ; 5.693 ; 5.693 ; Rise       ; CLOCK           ;
+;  OUT[7]   ; CLOCK      ; 5.264 ; 5.264 ; Rise       ; CLOCK           ;
+; READY     ; CLOCK      ; 4.940 ; 4.940 ; Rise       ; CLOCK           ;
+; ZERO      ; CLOCK      ; 5.263 ; 5.263 ; Rise       ; CLOCK           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; ENABLE     ; DECODE[0]   ; 7.197 ;    ;    ; 7.197 ;
+; ENABLE     ; DECODE[1]   ; 8.014 ;    ;    ; 8.014 ;
+; ENABLE     ; DECODE[2]   ; 8.081 ;    ;    ; 8.081 ;
+; ENABLE     ; DECODE[3]   ; 8.029 ;    ;    ; 8.029 ;
+; ENABLE     ; DECODE[4]   ; 7.196 ;    ;    ; 7.196 ;
+; ENABLE     ; DECODE[6]   ; 7.486 ;    ;    ; 7.486 ;
+; ENABLE     ; DECODE[7]   ; 8.018 ;    ;    ; 8.018 ;
+; ENABLE     ; DECODE[8]   ; 7.888 ;    ;    ; 7.888 ;
+; ENABLE     ; DECODE[9]   ; 6.567 ;    ;    ; 6.567 ;
+; ENABLE     ; DECODE[10]  ; 7.059 ;    ;    ; 7.059 ;
+; ENABLE     ; DECODE[11]  ; 7.580 ;    ;    ; 7.580 ;
+; ENABLE     ; DECODE[12]  ; 7.859 ;    ;    ; 7.859 ;
+; ENABLE     ; DECODE[13]  ; 6.931 ;    ;    ; 6.931 ;
+; ENABLE     ; DECODE[14]  ; 7.655 ;    ;    ; 7.655 ;
+; ENABLE     ; DECODE[15]  ; 7.061 ;    ;    ; 7.061 ;
+; OPCODE[0]  ; DECODE[0]   ; 5.753 ;    ;    ; 5.753 ;
+; OPCODE[0]  ; DECODE[1]   ; 6.573 ;    ;    ; 6.573 ;
+; OPCODE[0]  ; DECODE[2]   ; 6.639 ;    ;    ; 6.639 ;
+; OPCODE[0]  ; DECODE[3]   ; 6.586 ;    ;    ; 6.586 ;
+; OPCODE[0]  ; DECODE[4]   ; 5.752 ;    ;    ; 5.752 ;
+; OPCODE[0]  ; DECODE[6]   ; 6.503 ;    ;    ; 6.503 ;
+; OPCODE[0]  ; DECODE[7]   ; 6.576 ;    ;    ; 6.576 ;
+; OPCODE[0]  ; DECODE[8]   ; 6.582 ;    ;    ; 6.582 ;
+; OPCODE[0]  ; DECODE[9]   ; 7.979 ;    ;    ; 7.979 ;
+; OPCODE[0]  ; DECODE[10]  ; 5.756 ;    ;    ; 5.756 ;
+; OPCODE[0]  ; DECODE[11]  ; 6.500 ;    ;    ; 6.500 ;
+; OPCODE[0]  ; DECODE[12]  ; 6.551 ;    ;    ; 6.551 ;
+; OPCODE[0]  ; DECODE[13]  ; 8.342 ;    ;    ; 8.342 ;
+; OPCODE[0]  ; DECODE[14]  ; 6.570 ;    ;    ; 6.570 ;
+; OPCODE[0]  ; DECODE[15]  ; 5.759 ;    ;    ; 5.759 ;
+; OPCODE[1]  ; DECODE[0]   ; 6.176 ;    ;    ; 6.176 ;
+; OPCODE[1]  ; DECODE[1]   ; 6.996 ;    ;    ; 6.996 ;
+; OPCODE[1]  ; DECODE[2]   ; 7.063 ;    ;    ; 7.063 ;
+; OPCODE[1]  ; DECODE[3]   ; 7.011 ;    ;    ; 7.011 ;
+; OPCODE[1]  ; DECODE[4]   ; 6.177 ;    ;    ; 6.177 ;
+; OPCODE[1]  ; DECODE[6]   ; 6.910 ;    ;    ; 6.910 ;
+; OPCODE[1]  ; DECODE[7]   ; 7.000 ;    ;    ; 7.000 ;
+; OPCODE[1]  ; DECODE[8]   ; 7.006 ;    ;    ; 7.006 ;
+; OPCODE[1]  ; DECODE[9]   ; 8.075 ;    ;    ; 8.075 ;
+; OPCODE[1]  ; DECODE[10]  ; 6.181 ;    ;    ; 6.181 ;
+; OPCODE[1]  ; DECODE[11]  ; 6.700 ;    ;    ; 6.700 ;
+; OPCODE[1]  ; DECODE[12]  ; 6.974 ;    ;    ; 6.974 ;
+; OPCODE[1]  ; DECODE[13]  ; 8.438 ;    ;    ; 8.438 ;
+; OPCODE[1]  ; DECODE[14]  ; 6.775 ;    ;    ; 6.775 ;
+; OPCODE[1]  ; DECODE[15]  ; 6.183 ;    ;    ; 6.183 ;
+; OPCODE[2]  ; DECODE[0]   ; 5.947 ;    ;    ; 5.947 ;
+; OPCODE[2]  ; DECODE[1]   ; 6.767 ;    ;    ; 6.767 ;
+; OPCODE[2]  ; DECODE[2]   ; 6.813 ;    ;    ; 6.813 ;
+; OPCODE[2]  ; DECODE[3]   ; 6.760 ;    ;    ; 6.760 ;
+; OPCODE[2]  ; DECODE[4]   ; 5.941 ;    ;    ; 5.941 ;
+; OPCODE[2]  ; DECODE[6]   ; 6.553 ;    ;    ; 6.553 ;
+; OPCODE[2]  ; DECODE[7]   ; 6.752 ;    ;    ; 6.752 ;
+; OPCODE[2]  ; DECODE[8]   ; 6.832 ;    ;    ; 6.832 ;
+; OPCODE[2]  ; DECODE[9]   ; 6.551 ;    ;    ; 6.551 ;
+; OPCODE[2]  ; DECODE[10]  ; 5.997 ;    ;    ; 5.997 ;
+; OPCODE[2]  ; DECODE[11]  ; 6.677 ;    ;    ; 6.677 ;
+; OPCODE[2]  ; DECODE[12]  ; 6.803 ;    ;    ; 6.803 ;
+; OPCODE[2]  ; DECODE[13]  ; 6.922 ;    ;    ; 6.922 ;
+; OPCODE[2]  ; DECODE[14]  ; 6.752 ;    ;    ; 6.752 ;
+; OPCODE[2]  ; DECODE[15]  ; 5.996 ;    ;    ; 5.996 ;
+; OPCODE[3]  ; DECODE[0]   ; 7.102 ;    ;    ; 7.102 ;
+; OPCODE[3]  ; DECODE[1]   ; 7.919 ;    ;    ; 7.919 ;
+; OPCODE[3]  ; DECODE[2]   ; 7.986 ;    ;    ; 7.986 ;
+; OPCODE[3]  ; DECODE[3]   ; 7.934 ;    ;    ; 7.934 ;
+; OPCODE[3]  ; DECODE[4]   ; 7.101 ;    ;    ; 7.101 ;
+; OPCODE[3]  ; DECODE[6]   ; 7.391 ;    ;    ; 7.391 ;
+; OPCODE[3]  ; DECODE[7]   ; 7.923 ;    ;    ; 7.923 ;
+; OPCODE[3]  ; DECODE[8]   ; 7.793 ;    ;    ; 7.793 ;
+; OPCODE[3]  ; DECODE[9]   ; 6.582 ;    ;    ; 6.582 ;
+; OPCODE[3]  ; DECODE[10]  ; 6.964 ;    ;    ; 6.964 ;
+; OPCODE[3]  ; DECODE[11]  ; 7.485 ;    ;    ; 7.485 ;
+; OPCODE[3]  ; DECODE[12]  ; 7.764 ;    ;    ; 7.764 ;
+; OPCODE[3]  ; DECODE[13]  ; 6.946 ;    ;    ; 6.946 ;
+; OPCODE[3]  ; DECODE[14]  ; 7.560 ;    ;    ; 7.560 ;
+; OPCODE[3]  ; DECODE[15]  ; 6.966 ;    ;    ; 6.966 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; ENABLE     ; DECODE[0]   ; 7.197 ;    ;    ; 7.197 ;
+; ENABLE     ; DECODE[1]   ; 8.014 ;    ;    ; 8.014 ;
+; ENABLE     ; DECODE[2]   ; 8.081 ;    ;    ; 8.081 ;
+; ENABLE     ; DECODE[3]   ; 8.029 ;    ;    ; 8.029 ;
+; ENABLE     ; DECODE[4]   ; 7.196 ;    ;    ; 7.196 ;
+; ENABLE     ; DECODE[6]   ; 7.486 ;    ;    ; 7.486 ;
+; ENABLE     ; DECODE[7]   ; 8.018 ;    ;    ; 8.018 ;
+; ENABLE     ; DECODE[8]   ; 7.888 ;    ;    ; 7.888 ;
+; ENABLE     ; DECODE[9]   ; 6.567 ;    ;    ; 6.567 ;
+; ENABLE     ; DECODE[10]  ; 7.059 ;    ;    ; 7.059 ;
+; ENABLE     ; DECODE[11]  ; 7.580 ;    ;    ; 7.580 ;
+; ENABLE     ; DECODE[12]  ; 7.859 ;    ;    ; 7.859 ;
+; ENABLE     ; DECODE[13]  ; 6.931 ;    ;    ; 6.931 ;
+; ENABLE     ; DECODE[14]  ; 7.655 ;    ;    ; 7.655 ;
+; ENABLE     ; DECODE[15]  ; 7.061 ;    ;    ; 7.061 ;
+; OPCODE[0]  ; DECODE[0]   ; 5.753 ;    ;    ; 5.753 ;
+; OPCODE[0]  ; DECODE[1]   ; 6.573 ;    ;    ; 6.573 ;
+; OPCODE[0]  ; DECODE[2]   ; 6.639 ;    ;    ; 6.639 ;
+; OPCODE[0]  ; DECODE[3]   ; 6.586 ;    ;    ; 6.586 ;
+; OPCODE[0]  ; DECODE[4]   ; 5.752 ;    ;    ; 5.752 ;
+; OPCODE[0]  ; DECODE[6]   ; 6.503 ;    ;    ; 6.503 ;
+; OPCODE[0]  ; DECODE[7]   ; 6.576 ;    ;    ; 6.576 ;
+; OPCODE[0]  ; DECODE[8]   ; 6.582 ;    ;    ; 6.582 ;
+; OPCODE[0]  ; DECODE[9]   ; 7.979 ;    ;    ; 7.979 ;
+; OPCODE[0]  ; DECODE[10]  ; 5.756 ;    ;    ; 5.756 ;
+; OPCODE[0]  ; DECODE[11]  ; 6.500 ;    ;    ; 6.500 ;
+; OPCODE[0]  ; DECODE[12]  ; 6.551 ;    ;    ; 6.551 ;
+; OPCODE[0]  ; DECODE[13]  ; 8.342 ;    ;    ; 8.342 ;
+; OPCODE[0]  ; DECODE[14]  ; 6.570 ;    ;    ; 6.570 ;
+; OPCODE[0]  ; DECODE[15]  ; 5.759 ;    ;    ; 5.759 ;
+; OPCODE[1]  ; DECODE[0]   ; 6.176 ;    ;    ; 6.176 ;
+; OPCODE[1]  ; DECODE[1]   ; 6.996 ;    ;    ; 6.996 ;
+; OPCODE[1]  ; DECODE[2]   ; 7.063 ;    ;    ; 7.063 ;
+; OPCODE[1]  ; DECODE[3]   ; 7.011 ;    ;    ; 7.011 ;
+; OPCODE[1]  ; DECODE[4]   ; 6.177 ;    ;    ; 6.177 ;
+; OPCODE[1]  ; DECODE[6]   ; 6.910 ;    ;    ; 6.910 ;
+; OPCODE[1]  ; DECODE[7]   ; 7.000 ;    ;    ; 7.000 ;
+; OPCODE[1]  ; DECODE[8]   ; 7.006 ;    ;    ; 7.006 ;
+; OPCODE[1]  ; DECODE[9]   ; 8.075 ;    ;    ; 8.075 ;
+; OPCODE[1]  ; DECODE[10]  ; 6.181 ;    ;    ; 6.181 ;
+; OPCODE[1]  ; DECODE[11]  ; 6.700 ;    ;    ; 6.700 ;
+; OPCODE[1]  ; DECODE[12]  ; 6.974 ;    ;    ; 6.974 ;
+; OPCODE[1]  ; DECODE[13]  ; 8.438 ;    ;    ; 8.438 ;
+; OPCODE[1]  ; DECODE[14]  ; 6.775 ;    ;    ; 6.775 ;
+; OPCODE[1]  ; DECODE[15]  ; 6.183 ;    ;    ; 6.183 ;
+; OPCODE[2]  ; DECODE[0]   ; 5.947 ;    ;    ; 5.947 ;
+; OPCODE[2]  ; DECODE[1]   ; 6.767 ;    ;    ; 6.767 ;
+; OPCODE[2]  ; DECODE[2]   ; 6.813 ;    ;    ; 6.813 ;
+; OPCODE[2]  ; DECODE[3]   ; 6.760 ;    ;    ; 6.760 ;
+; OPCODE[2]  ; DECODE[4]   ; 5.941 ;    ;    ; 5.941 ;
+; OPCODE[2]  ; DECODE[6]   ; 6.553 ;    ;    ; 6.553 ;
+; OPCODE[2]  ; DECODE[7]   ; 6.752 ;    ;    ; 6.752 ;
+; OPCODE[2]  ; DECODE[8]   ; 6.832 ;    ;    ; 6.832 ;
+; OPCODE[2]  ; DECODE[9]   ; 6.551 ;    ;    ; 6.551 ;
+; OPCODE[2]  ; DECODE[10]  ; 5.997 ;    ;    ; 5.997 ;
+; OPCODE[2]  ; DECODE[11]  ; 6.677 ;    ;    ; 6.677 ;
+; OPCODE[2]  ; DECODE[12]  ; 6.803 ;    ;    ; 6.803 ;
+; OPCODE[2]  ; DECODE[13]  ; 6.922 ;    ;    ; 6.922 ;
+; OPCODE[2]  ; DECODE[14]  ; 6.752 ;    ;    ; 6.752 ;
+; OPCODE[2]  ; DECODE[15]  ; 5.996 ;    ;    ; 5.996 ;
+; OPCODE[3]  ; DECODE[0]   ; 7.102 ;    ;    ; 7.102 ;
+; OPCODE[3]  ; DECODE[1]   ; 7.919 ;    ;    ; 7.919 ;
+; OPCODE[3]  ; DECODE[2]   ; 7.986 ;    ;    ; 7.986 ;
+; OPCODE[3]  ; DECODE[3]   ; 7.934 ;    ;    ; 7.934 ;
+; OPCODE[3]  ; DECODE[4]   ; 7.101 ;    ;    ; 7.101 ;
+; OPCODE[3]  ; DECODE[6]   ; 7.391 ;    ;    ; 7.391 ;
+; OPCODE[3]  ; DECODE[7]   ; 7.923 ;    ;    ; 7.923 ;
+; OPCODE[3]  ; DECODE[8]   ; 7.793 ;    ;    ; 7.793 ;
+; OPCODE[3]  ; DECODE[9]   ; 6.582 ;    ;    ; 6.582 ;
+; OPCODE[3]  ; DECODE[10]  ; 6.964 ;    ;    ; 6.964 ;
+; OPCODE[3]  ; DECODE[11]  ; 7.485 ;    ;    ; 7.485 ;
+; OPCODE[3]  ; DECODE[12]  ; 7.764 ;    ;    ; 7.764 ;
+; OPCODE[3]  ; DECODE[13]  ; 6.946 ;    ;    ; 6.946 ;
+; OPCODE[3]  ; DECODE[14]  ; 7.560 ;    ;    ; 7.560 ;
+; OPCODE[3]  ; DECODE[15]  ; 6.966 ;    ;    ; 6.966 ;
++------------+-------------+-------+----+----+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK      ; CLOCK    ; 261      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK      ; CLOCK    ; 261      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 21    ; 21   ;
+; Unconstrained Input Port Paths  ; 340   ; 340  ;
+; Unconstrained Output Ports      ; 25    ; 25   ;
+; Unconstrained Output Port Paths ; 111   ; 111  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Sun Mar 31 13:33:50 2024
+Info: Command: quartus_sta Practical3 -c Practical3
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 20 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 14 of the 14 physical processors detected instead.
+Info (306004): Started post-fitting delay annotation
+Info (306005): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Practical3.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK CLOCK
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.323
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.323             -60.953 CLOCK 
+Info (332146): Worst-case hold slack is 0.865
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.865               0.000 CLOCK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 CLOCK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4597 megabytes
+    Info: Processing ended: Sun Mar 31 13:33:52 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,0 +1,11 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Practical3:inst28|multiplier:inst7|lpm_mult:lpm_mult_component|mult_82n:auto_generated|mac_out1,
+REGISTER_PACKING,REG_PACK_TYPE_DSPMULT,DATAA,1,RegisterFile:inst9|lpm_mux0:inst11|lpm_mux:LPM_MUX_component|mux_tle:auto_generated|external_reg[0],Practical3:inst28|multiplier:inst7|lpm_mult:lpm_mult_component|mult_82n:auto_generated|mac_mult2,
+REGISTER_PACKING,REG_PACK_TYPE_DSPMULT,DATAA,2,RegisterFile:inst9|lpm_mux0:inst11|lpm_mux:LPM_MUX_component|mux_tle:auto_generated|external_reg[1],Practical3:inst28|multiplier:inst7|lpm_mult:lpm_mult_component|mult_82n:auto_generated|mac_mult2,
+REGISTER_PACKING,REG_PACK_TYPE_DSPMULT,DATAA,3,RegisterFile:inst9|lpm_mux0:inst11|lpm_mux:LPM_MUX_component|mux_tle:auto_generated|external_reg[2],Practical3:inst28|multiplier:inst7|lpm_mult:lpm_mult_component|mult_82n:auto_generated|mac_mult2,
+REGISTER_PACKING,REG_PACK_TYPE_DSPMULT,DATAA,4,RegisterFile:inst9|lpm_mux0:inst11|lpm_mux:LPM_MUX_component|mux_tle:auto_generated|external_reg[3],Practical3:inst28|multiplier:inst7|lpm_mult:lpm_mult_component|mult_82n:auto_generated|mac_mult2,
+REGISTER_PACKING,REG_PACK_TYPE_DSPMULT,DATAA,5,RegisterFile:inst9|lpm_mux0:inst11|lpm_mux:LPM_MUX_component|mux_tle:auto_generated|external_reg[4],Practical3:inst28|multiplier:inst7|lpm_mult:lpm_mult_component|mult_82n:auto_generated|mac_mult2,
+REGISTER_PACKING,REG_PACK_TYPE_DSPMULT,DATAA,6,RegisterFile:inst9|lpm_mux0:inst11|lpm_mux:LPM_MUX_component|mux_tle:auto_generated|external_reg[5],Practical3:inst28|multiplier:inst7|lpm_mult:lpm_mult_component|mult_82n:auto_generated|mac_mult2,
+REGISTER_PACKING,REG_PACK_TYPE_DSPMULT,DATAA,7,RegisterFile:inst9|lpm_mux0:inst11|lpm_mux:LPM_MUX_component|mux_tle:auto_generated|external_reg[6],Practical3:inst28|multiplier:inst7|lpm_mult:lpm_mult_component|mult_82n:auto_generated|mac_mult2,
+REGISTER_PACKING,REG_PACK_TYPE_DSPMULT,DATAA,8,RegisterFile:inst9|lpm_mux0:inst11|lpm_mux:LPM_MUX_component|mux_tle:auto_generated|external_reg[7],Practical3:inst28|multiplier:inst7|lpm_mult:lpm_mult_component|mult_82n:auto_generated|mac_mult2,
+PORT_SWAPPING,PORT_SWAPPING_FINISHED,Practical3:inst28|multiplier:inst7|lpm_mult:lpm_mult_component|mult_82n:auto_generated|mac_mult2,

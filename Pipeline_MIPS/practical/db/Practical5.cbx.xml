@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Practical5">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Extender:inst8|digit_extend_mux:inst|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_14e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|InstructionMemory:inst24|LPM_RAM_IO:inst4|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_u0g1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Practical3:inst28|decode4_16_e:inst2|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_ktf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|number_seven:inst30|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_ce6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Control:inst25|CU_Decoder:inst|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_ktf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Practical3:inst28|SCAdder-8bit:inst3|lpm_mux10:inst5|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_44e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Practical3:inst28|lpm_mux9:inst6|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_ele.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|RegisterFile:inst9|lpm_mux0:inst10|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_tle.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|DataMemory:inst41|LPM_RAM_DQ:inst2|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_qvf1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Practical3:inst28|lpm_compare0:inst18|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_1pg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|RegisterFile:inst9|lpm_decode1:inst21|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_4sf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|RegisterFile:inst9|lpm_mux0:inst11|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_tle.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Branch_MUX:inst17|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_84e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Branch_MUX:inst26|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_84e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Practical3:inst28|SUB_8bit:inst10|SCAdder-8bit:inst|lpm_mux10:inst5|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_44e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|SCAdder-8bit:inst18|lpm_mux10:inst5|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_44e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Branch_MUX:inst27|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_84e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Control:inst20|CU_Decoder:inst|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_ktf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|number_one:inst15|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_rf6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|ALU_SRC_MUX:inst16|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_84e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Practical3:inst28|lpm_mux1:inst19|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_q8f.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|SCAdder-8bit:inst21|lpm_mux10:inst5|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_44e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|DataWriteMux:inst12|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_84e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Practical3:inst28|multiplier:inst7|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_82n.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|even_counter:inst36|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_dai.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|write_register_mux:inst11|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_34e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Control:inst14|CU_Decoder:inst|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_ktf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Control:inst23|CU_Decoder:inst|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_ktf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Control:inst32|CU_Decoder:inst|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_ktf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|DataWriteMux:inst40|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_84e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|Practical3:inst28|lpm_mux8:inst5|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_6ne.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU|write_register_mux:inst29|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_34e.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

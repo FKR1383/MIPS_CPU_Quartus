@@ -1,0 +1,67 @@
+--lpm_mux CASCADE_CHAIN="MANUAL" DEVICE_FAMILY="MAX II" IGNORE_CASCADE_BUFFERS="OFF" LPM_PIPELINE=1 LPM_SIZE=16 LPM_WIDTH=1 LPM_WIDTHS=4 clock data result sel
+--VERSION_BEGIN 13.1 cbx_lpm_mux 2013:10:23:18:05:48:SJ cbx_mgl 2013:10:23:18:06:54:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2013 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+
+--synthesis_resources = lut 10 
+SUBDESIGN mux_u8e
+( 
+	clock	:	input;
+	data[15..0]	:	input;
+	result[0..0]	:	output;
+	sel[3..0]	:	input;
+) 
+VARIABLE 
+	dffe1a[3..0] : dffe;
+	dffe2 : dffe;
+	dffe3 : dffe;
+	dffe4 : dffe;
+	dffe5 : dffe;
+	result_node[0..0]	: WIRE;
+	sel_ffs_wire[3..0]	: WIRE;
+	sel_node[3..0]	: WIRE;
+	w_data10w[15..0]	: WIRE;
+	w_data65w[3..0]	: WIRE;
+	w_data66w[3..0]	: WIRE;
+	w_data67w[3..0]	: WIRE;
+	w_data68w[3..0]	: WIRE;
+	w_sel69w[1..0]	: WIRE;
+
+BEGIN 
+	dffe1a[].clk = clock;
+	dffe1a[].d = sel[3..0];
+	dffe2.clk = clock;
+	dffe2.d = (((w_data65w[1..1] & w_sel69w[0..0]) & (! (((w_data65w[0..0] & (! w_sel69w[1..1])) & (! w_sel69w[0..0])) # (w_sel69w[1..1] & (w_sel69w[0..0] # w_data65w[2..2]))))) # ((((w_data65w[0..0] & (! w_sel69w[1..1])) & (! w_sel69w[0..0])) # (w_sel69w[1..1] & (w_sel69w[0..0] # w_data65w[2..2]))) & (w_data65w[3..3] # (! w_sel69w[0..0]))));
+	dffe3.clk = clock;
+	dffe3.d = (((w_data66w[1..1] & w_sel69w[0..0]) & (! (((w_data66w[0..0] & (! w_sel69w[1..1])) & (! w_sel69w[0..0])) # (w_sel69w[1..1] & (w_sel69w[0..0] # w_data66w[2..2]))))) # ((((w_data66w[0..0] & (! w_sel69w[1..1])) & (! w_sel69w[0..0])) # (w_sel69w[1..1] & (w_sel69w[0..0] # w_data66w[2..2]))) & (w_data66w[3..3] # (! w_sel69w[0..0]))));
+	dffe4.clk = clock;
+	dffe4.d = (((w_data67w[1..1] & w_sel69w[0..0]) & (! (((w_data67w[0..0] & (! w_sel69w[1..1])) & (! w_sel69w[0..0])) # (w_sel69w[1..1] & (w_sel69w[0..0] # w_data67w[2..2]))))) # ((((w_data67w[0..0] & (! w_sel69w[1..1])) & (! w_sel69w[0..0])) # (w_sel69w[1..1] & (w_sel69w[0..0] # w_data67w[2..2]))) & (w_data67w[3..3] # (! w_sel69w[0..0]))));
+	dffe5.clk = clock;
+	dffe5.d = (((w_data68w[1..1] & w_sel69w[0..0]) & (! (((w_data68w[0..0] & (! w_sel69w[1..1])) & (! w_sel69w[0..0])) # (w_sel69w[1..1] & (w_sel69w[0..0] # w_data68w[2..2]))))) # ((((w_data68w[0..0] & (! w_sel69w[1..1])) & (! w_sel69w[0..0])) # (w_sel69w[1..1] & (w_sel69w[0..0] # w_data68w[2..2]))) & (w_data68w[3..3] # (! w_sel69w[0..0]))));
+	result[] = result_node[];
+	result_node[] = ( (((dffe3.q & sel_node[2..2]) & (! (((dffe2.q & (! sel_node[3..3])) & (! sel_node[2..2])) # (sel_node[3..3] & (sel_node[2..2] # dffe4.q))))) # ((((dffe2.q & (! sel_node[3..3])) & (! sel_node[2..2])) # (sel_node[3..3] & (sel_node[2..2] # dffe4.q))) & (dffe5.q # (! sel_node[2..2])))));
+	sel_ffs_wire[] = ( dffe1a[].q);
+	sel_node[] = ( sel_ffs_wire[3..2], sel[1..0]);
+	w_data10w[] = ( data[15..0]);
+	w_data65w[3..0] = w_data10w[3..0];
+	w_data66w[3..0] = w_data10w[7..4];
+	w_data67w[3..0] = w_data10w[11..8];
+	w_data68w[3..0] = w_data10w[15..12];
+	w_sel69w[1..0] = sel_node[1..0];
+END;
+--VALID FILE

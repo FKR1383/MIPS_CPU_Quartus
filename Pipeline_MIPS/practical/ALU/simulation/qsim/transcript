@@ -1,0 +1,51 @@
+# do Practical3.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Practical3
+# 
+# Top level modules:
+# 	Practical3
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Practical3_vlg_sample_tst
+# -- Compiling module Practical3_vlg_check_tst
+# -- Compiling module Practical3_vlg_vec_tst
+# 
+# Top level modules:
+# 	Practical3_vlg_vec_tst
+# vsim -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.Practical3_vlg_vec_tst 
+# Loading work.Practical3_vlg_vec_tst
+# Loading work.Practical3
+# Loading maxii_ver.maxii_io
+# Loading maxii_ver.maxii_lcell
+# Loading maxii_ver.maxii_asynch_lcell
+# Loading maxii_ver.maxii_lcell_register
+# Loading work.Practical3_vlg_sample_tst
+# Loading work.Practical3_vlg_check_tst
+# ERROR! Vector Mismatch for output port OUT[0] :: @time = 15000.000 ps
+#      Expected value = 00011011
+#      Real value = 00000000
+# ERROR! Vector Mismatch for output port OUT[1] :: @time = 15000.000 ps
+#      Expected value = 00011011
+#      Real value = 00000000
+# ERROR! Vector Mismatch for output port OUT[3] :: @time = 15000.000 ps
+#      Expected value = 00011011
+#      Real value = 00000000
+# ERROR! Vector Mismatch for output port OUT[4] :: @time = 15000.000 ps
+#      Expected value = 00011011
+#      Real value = 00000000
+# ERROR! Vector Mismatch for output port OUT[2] :: @time = 30000.000 ps
+#      Expected value = 00011011
+#      Real value = 11110101
+# ERROR! Vector Mismatch for output port OUT[5] :: @time = 30000.000 ps
+#      Expected value = 00011011
+#      Real value = 11110101
+# ERROR! Vector Mismatch for output port OUT[6] :: @time = 30000.000 ps
+#      Expected value = 00011011
+#      Real value = 11110101
+# ERROR! Vector Mismatch for output port OUT[7] :: @time = 30000.000 ps
+#      Expected value = 00011011
+#      Real value = 11110101
+#           8 mismatched vectors : Simulation failed !
+# ** Note: $finish    : Test1.vwf.vt(631)
+#    Time: 1 us  Iteration: 0  Instance: /Practical3_vlg_vec_tst/tb_out

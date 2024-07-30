@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="practical4">
+		<CBX_INST_ENTRY INSTANCE_NAME="|RegisterFile|lpm_decode1:inst21|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_4sf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RegisterFile|lpm_mux0:inst10|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_tle.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RegisterFile|lpm_mux0:inst11|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_tle.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

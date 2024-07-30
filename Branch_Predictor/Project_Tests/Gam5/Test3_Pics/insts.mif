@@ -1,0 +1,35 @@
+DEPTH = 256;
+WIDTH = 16;
+
+ADDRESS_RADIX = DEC;
+DATA_RADIX = BIN;
+
+CONTENT BEGIN
+0 : 1010000000000000; -- no-op
+1 : 0010000000001111; -- ADDI r0, r0, 15 --> r0 = 15
+2 : 1010000000000000; -- no-op for data dependency
+3 : 1010000000000000; -- no-op for data dependency
+4 : 1000000001001110; -- BEQ r0, r1, 14 --> W/O Jump to 19
+5 : 1010000000000000; -- no-op for branch
+6 : 1010000000000000; -- no-op for branch
+7 : 1000000000000001; -- BEQ r0, r0, 1 --> Go to 9
+8 : 1010000000000000; -- no-op for branch
+9 : 1010000000000000; -- no-op
+10 : 1000000000000001; -- BEQ r0, r0, 1 --> Go to 12
+11 : 1010000000000000; -- no-op for branch
+12 : 1010000000000000; -- no-op
+13 : 0010001001001111; -- ADDI r1, r1, 15 --> r1 = 15
+14 : 1010000000000000; -- no-op for data dependency
+15 : 1010000000000000; -- no-op for data dependency
+16 : 1000000000110001; -- BEQ r0, r0, -15 --> Go to 2
+17 : 1010000000000000; -- no-op for branch
+18 : 1010000000000000; -- no-op for branch
+19 : 1010000000000000; -- no-op
+20 : 1010000000000000; -- no-op
+21 : 1000000000101111; -- BEQ r0, r0, -17 --> Go to 5
+22 : 1010000000000000; -- no-op for branch
+
+
+
+
+END;

@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 900mV 100C Model Setup 'CLOCK'
+Slack : -5.381
+TNS   : -215.837
+
+Type  : Slow 900mV 100C Model Setup 'CPU_Clock_Handler:inst47|CPU_clock_designer_13:inst46|lpm_counter:LPM_COUNTER_component|cntr_gok:auto_generated|counter_reg_bit[0]'
+Slack : -1.849
+TNS   : -83.629
+
+Type  : Slow 900mV 100C Model Hold 'CPU_Clock_Handler:inst47|CPU_clock_designer_13:inst46|lpm_counter:LPM_COUNTER_component|cntr_gok:auto_generated|counter_reg_bit[0]'
+Slack : -1.982
+TNS   : -14.906
+
+Type  : Slow 900mV 100C Model Hold 'CLOCK'
+Slack : -1.419
+TNS   : -51.585
+
+Type  : Slow 900mV 100C Model Recovery 'CLOCK'
+Slack : -0.728
+TNS   : -10.864
+
+Type  : Slow 900mV 100C Model Removal 'CLOCK'
+Slack : 0.924
+TNS   : 0.000
+
+Type  : Slow 900mV 100C Model Minimum Pulse Width 'CLOCK'
+Slack : -2.846
+TNS   : -326.154
+
+Type  : Slow 900mV 100C Model Minimum Pulse Width 'CPU_Clock_Handler:inst47|CPU_clock_designer_13:inst46|lpm_counter:LPM_COUNTER_component|cntr_gok:auto_generated|counter_reg_bit[0]'
+Slack : -1.000
+TNS   : -117.012
+
+Type  : Slow 900mV -40C Model Setup 'CLOCK'
+Slack : -4.980
+TNS   : -196.622
+
+Type  : Slow 900mV -40C Model Setup 'CPU_Clock_Handler:inst47|CPU_clock_designer_13:inst46|lpm_counter:LPM_COUNTER_component|cntr_gok:auto_generated|counter_reg_bit[0]'
+Slack : -1.725
+TNS   : -73.077
+
+Type  : Slow 900mV -40C Model Hold 'CPU_Clock_Handler:inst47|CPU_clock_designer_13:inst46|lpm_counter:LPM_COUNTER_component|cntr_gok:auto_generated|counter_reg_bit[0]'
+Slack : -1.836
+TNS   : -13.756
+
+Type  : Slow 900mV -40C Model Hold 'CLOCK'
+Slack : -1.281
+TNS   : -45.084
+
+Type  : Slow 900mV -40C Model Recovery 'CLOCK'
+Slack : -0.602
+TNS   : -8.890
+
+Type  : Slow 900mV -40C Model Removal 'CLOCK'
+Slack : 0.824
+TNS   : 0.000
+
+Type  : Slow 900mV -40C Model Minimum Pulse Width 'CLOCK'
+Slack : -2.846
+TNS   : -325.774
+
+Type  : Slow 900mV -40C Model Minimum Pulse Width 'CPU_Clock_Handler:inst47|CPU_clock_designer_13:inst46|lpm_counter:LPM_COUNTER_component|cntr_gok:auto_generated|counter_reg_bit[0]'
+Slack : -1.000
+TNS   : -115.843
+
+Type  : Fast 900mV -40C Model Setup 'CLOCK'
+Slack : -2.953
+TNS   : -88.417
+
+Type  : Fast 900mV -40C Model Setup 'CPU_Clock_Handler:inst47|CPU_clock_designer_13:inst46|lpm_counter:LPM_COUNTER_component|cntr_gok:auto_generated|counter_reg_bit[0]'
+Slack : -0.401
+TNS   : -8.303
+
+Type  : Fast 900mV -40C Model Hold 'CPU_Clock_Handler:inst47|CPU_clock_designer_13:inst46|lpm_counter:LPM_COUNTER_component|cntr_gok:auto_generated|counter_reg_bit[0]'
+Slack : -1.096
+TNS   : -8.261
+
+Type  : Fast 900mV -40C Model Hold 'CLOCK'
+Slack : -0.905
+TNS   : -36.442
+
+Type  : Fast 900mV -40C Model Recovery 'CLOCK'
+Slack : 0.132
+TNS   : 0.000
+
+Type  : Fast 900mV -40C Model Removal 'CLOCK'
+Slack : 0.462
+TNS   : 0.000
+
+Type  : Fast 900mV -40C Model Minimum Pulse Width 'CLOCK'
+Slack : -2.846
+TNS   : -167.951
+
+Type  : Fast 900mV -40C Model Minimum Pulse Width 'CPU_Clock_Handler:inst47|CPU_clock_designer_13:inst46|lpm_counter:LPM_COUNTER_component|cntr_gok:auto_generated|counter_reg_bit[0]'
+Slack : -0.398
+TNS   : -44.669
+
+------------------------------------------------------------

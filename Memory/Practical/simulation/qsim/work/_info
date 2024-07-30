@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Sharif\Term4\ComputerArchitecture\Tamrin4\Practical\simulation\qsim
+vDataMemory
+Z1 IOoDL<8lD<Z?ReecG5L<9j1
+Z2 V<C^=fDJlCEDQ_:TW@H^J42
+Z3 dD:\Sharif\Term4\ComputerArchitecture\Tamrin4\Practical\simulation\qsim
+Z4 w1710604868
+Z5 8practical4.vo
+Z6 Fpractical4.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|practical4.vo|
+Z9 o-work work -O0
+Z10 n@data@memory
+!i10b 1
+Z11 !s100 cc^XCJcR_UkWoLCK`ReJl1
+!s85 0
+Z12 !s108 1710604868.822000
+Z13 !s107 practical4.vo|
+!s101 -O0
+vDataMemory_vlg_check_tst
+!i10b 1
+Z14 !s100 jAQ^0jlC[fjNQSUD0[gQA1
+Z15 IWfd?H<OYlX0?[Zg6aZa3J3
+Z16 VZAIj^CSA7dJ58Rk]E7o=;3
+R3
+Z17 w1710604867
+Z18 8DataMemoryTest.vwf.vt
+Z19 FDataMemoryTest.vwf.vt
+L0 65
+R7
+r1
+!s85 0
+31
+Z20 !s108 1710604868.857000
+Z21 !s107 DataMemoryTest.vwf.vt|
+Z22 !s90 -work|work|DataMemoryTest.vwf.vt|
+!s101 -O0
+R9
+Z23 n@data@memory_vlg_check_tst
+vDataMemory_vlg_sample_tst
+!i10b 1
+Z24 !s100 5mA3_e3bz6_>kSHh?W7J@3
+Z25 I9^ejePUbSi_cS]a;NWK?71
+Z26 VKn_jRC]LeVHZ>6B1`F:5T0
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 n@data@memory_vlg_sample_tst
+vDataMemory_vlg_vec_tst
+!i10b 1
+!s100 >iHnW78EH]BU]`;dcVLD30
+Id7_^39WYKDDjjGOjRVXRz3
+Z28 VB883X7Sl`bXaj9z^3h4XY3
+R3
+R17
+R18
+R19
+Z29 L0 645
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z30 n@data@memory_vlg_vec_tst
+vRegisterFile
+Z31 !s100 [7E]YB0QRejLGd8`K;8Db2
+Z32 Io32OWS_mZVCemZCR:D^za1
+Z33 VJ<[eEaW4WR0_6SgQmMh8@1
+R3
+Z34 w1710604796
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+Z35 n@register@file
+Z36 !s108 1710604796.807000
+R13
+!i10b 1
+!s85 0
+!s101 -O0
+vRegisterFile_vlg_check_tst
+Z37 IP<bg59zOW?O[SWGX?cYgB1
+Z38 VLDFH`8EXA2To]4j0iK=`]2
+R3
+Z39 w1710604245
+Z40 8RegisterFileTest.vwf.vt
+Z41 FRegisterFileTest.vwf.vt
+L0 67
+R7
+r1
+31
+Z42 !s108 1710604246.925000
+Z43 !s107 RegisterFileTest.vwf.vt|
+Z44 !s90 -work|work|RegisterFileTest.vwf.vt|
+R9
+Z45 n@register@file_vlg_check_tst
+Z46 !s100 R]T93I5HbF^Y0d39=4l0]2
+!i10b 1
+!s85 0
+!s101 -O0
+vRegisterFile_vlg_sample_tst
+Z47 !s100 V7iQJo3C?MJYQ2TE;?hn70
+Z48 I2HE=X_kLO9^<BaMHkji7P1
+Z49 VI7kMg]_EEJnkzdPd4k`z_3
+R3
+R39
+R40
+R41
+L0 29
+R7
+r1
+31
+R42
+R43
+R44
+R9
+Z50 n@register@file_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vRegisterFile_vlg_vec_tst
+Z51 I=ZhQoa=GDQMZ90G]3Oj5i3
+Z52 V2^DCUc55`n[hXn]`?RZ9[2
+R3
+Z53 w1710604795
+R18
+R19
+L0 29
+R7
+r1
+31
+R22
+R9
+Z54 n@register@file_vlg_vec_tst
+Z55 !s100 ;Ok^4CdNoJ^F>:mS3Ua6H3
+Z56 !s108 1710604796.850000
+Z57 !s107 DataMemoryTest.vwf.vt|
+!i10b 1
+!s85 0
+!s101 -O0

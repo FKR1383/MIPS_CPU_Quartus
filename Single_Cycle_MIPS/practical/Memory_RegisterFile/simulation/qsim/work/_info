@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Sharif\Term4\ComputerArchitecture\Tamrin4\Practical\simulation\qsim
+vDataMemory
+Z1 !s100 cc^XCJcR_UkWoLCK`ReJl1
+Z2 IOoDL<8lD<Z?ReecG5L<9j1
+Z3 V<C^=fDJlCEDQ_:TW@H^J42
+Z4 dD:\Sharif\Term4\ComputerArchitecture\Tamrin4\Practical\simulation\qsim
+Z5 w1711876813
+Z6 8practical4.vo
+Z7 Fpractical4.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|practical4.vo|
+Z10 o-work work -O0
+Z11 n@data@memory
+Z12 !s108 1711876813.816000
+Z13 !s107 practical4.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vDataMemory_vlg_check_tst
+Z14 !s100 jAQ^0jlC[fjNQSUD0[gQA1
+Z15 IWfd?H<OYlX0?[Zg6aZa3J3
+Z16 VZAIj^CSA7dJ58Rk]E7o=;3
+R4
+Z17 w1711876790
+Z18 8DataMemoryTest.vwf.vt
+Z19 FDataMemoryTest.vwf.vt
+L0 65
+R8
+r1
+31
+Z20 !s108 1711876792.236000
+Z21 !s107 DataMemoryTest.vwf.vt|
+Z22 !s90 -work|work|DataMemoryTest.vwf.vt|
+R10
+Z23 n@data@memory_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vDataMemory_vlg_sample_tst
+Z24 !s100 5mA3_e3bz6_>kSHh?W7J@3
+Z25 I9^ejePUbSi_cS]a;NWK?71
+Z26 VKn_jRC]LeVHZ>6B1`F:5T0
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+31
+R20
+R21
+R22
+R10
+Z27 n@data@memory_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vDataMemory_vlg_vec_tst
+Z28 INnI2]>H>YSOe`mz`Ofeic1
+Z29 VB883X7Sl`bXaj9z^3h4XY3
+R4
+Z30 w1711876811
+Z31 8RegisterFileTest.vwf.vt
+Z32 FRegisterFileTest.vwf.vt
+L0 29
+R8
+r1
+31
+Z33 !s90 -work|work|RegisterFileTest.vwf.vt|
+R10
+Z34 n@data@memory_vlg_vec_tst
+Z35 !s100 ?20m6^4>D2:6I6WdPDJ=Q0
+Z36 !s108 1711876813.852000
+Z37 !s107 RegisterFileTest.vwf.vt|
+!i10b 1
+!s85 0
+!s101 -O0
+vRegisterFile
+Z38 !s100 [7E]YB0QRejLGd8`K;8Db2
+Z39 Io32OWS_mZVCemZCR:D^za1
+Z40 VJ<[eEaW4WR0_6SgQmMh8@1
+R4
+Z41 w1711876923
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z42 n@register@file
+!i10b 1
+!s85 0
+Z43 !s108 1711876923.490000
+R13
+!s101 -O0
+vRegisterFile_vlg_check_tst
+!i10b 1
+Z44 !s100 R]T93I5HbF^Y0d39=4l0]2
+Z45 IP<bg59zOW?O[SWGX?cYgB1
+Z46 VLDFH`8EXA2To]4j0iK=`]2
+R4
+Z47 w1711876921
+R31
+R32
+L0 67
+R8
+r1
+!s85 0
+31
+Z48 !s108 1711876923.531000
+Z49 !s107 RegisterFileTest.vwf.vt|
+R33
+!s101 -O0
+R10
+Z50 n@register@file_vlg_check_tst
+vRegisterFile_vlg_sample_tst
+!i10b 1
+Z51 !s100 V7iQJo3C?MJYQ2TE;?hn70
+Z52 I2HE=X_kLO9^<BaMHkji7P1
+Z53 VI7kMg]_EEJnkzdPd4k`z_3
+R4
+R47
+R31
+R32
+L0 29
+R8
+r1
+!s85 0
+31
+R48
+R49
+R33
+!s101 -O0
+R10
+Z54 n@register@file_vlg_sample_tst
+vRegisterFile_vlg_vec_tst
+!i10b 1
+!s100 ;?H87n6Lz<KcGFked[VUQ1
+IOhLGRGHEfj2dK5CBI:GXo2
+Z55 V2^DCUc55`n[hXn]`?RZ9[2
+R4
+R47
+R31
+R32
+L0 591
+R8
+r1
+!s85 0
+31
+R48
+R49
+R33
+!s101 -O0
+R10
+Z56 n@register@file_vlg_vec_tst

@@ -1,0 +1,81 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+# Date created = 17:11:41  March 09, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Practical3_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX II"
+set_global_assignment -name DEVICE AUTO
+set_global_assignment -name TOP_LEVEL_ENTITY Practical3
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:11:41  MARCH 09, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name BDF_FILE Practical3.bdf
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "D:/Sharif/Term4/ComputerArchitecture/Tamrin3/Practical/simulation/qsim/" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name QIP_FILE lpm_decode0.qip
+set_global_assignment -name BDF_FILE AND8bit.bdf
+set_global_assignment -name BDF_FILE OR8bit.bdf
+set_global_assignment -name BDF_FILE XOR8bit.bdf
+set_global_assignment -name BDF_FILE FA.bdf
+set_global_assignment -name QIP_FILE lpm_mux0.qip
+set_global_assignment -name BDF_FILE "SCAdder-8bit.bdf"
+set_global_assignment -name BDF_FILE SUB_8bit.bdf
+set_global_assignment -name QIP_FILE lpm_compare0.qip
+set_global_assignment -name QIP_FILE lpm_mux1.qip
+set_global_assignment -name BDF_FILE Register8bit.bdf
+set_global_assignment -name BDF_FILE Register16bit.bdf
+set_global_assignment -name QIP_FILE lpm_counter0.qip
+set_global_assignment -name QIP_FILE lpm_clshift0.qip
+set_global_assignment -name BDF_FILE Register17bit.bdf
+set_global_assignment -name QIP_FILE lpm_compare1.qip
+set_global_assignment -name QIP_FILE lpm_mux2.qip
+set_global_assignment -name QIP_FILE lpm_mux3.qip
+set_global_assignment -name QIP_FILE lpm_mux4.qip
+set_global_assignment -name QIP_FILE lpm_mux5.qip
+set_global_assignment -name QIP_FILE lpm_add_sub0.qip
+set_global_assignment -name BDF_FILE Booth_Complex_Adder.bdf
+set_global_assignment -name BDF_FILE Booth_Multiplier.bdf
+set_global_assignment -name QIP_FILE lpm_clshift1.qip
+set_global_assignment -name QIP_FILE lpm_mux6.qip
+set_global_assignment -name QIP_FILE lpm_mux7.qip
+set_global_assignment -name QIP_FILE lpm_mux8.qip
+set_global_assignment -name QIP_FILE lpm_mux9.qip
+set_global_assignment -name BDF_FILE RCadder_4bit.bdf
+set_global_assignment -name QIP_FILE lpm_mux10.qip
+set_global_assignment -name VECTOR_WAVEFORM_FILE Test1.vwf
