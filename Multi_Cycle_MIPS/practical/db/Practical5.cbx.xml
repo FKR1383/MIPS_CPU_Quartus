@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Practical5">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Extender:inst16|digit_extend_mux:inst|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_14e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Practical3:inst8|SCAdder-8bit:inst3|lpm_mux10:inst5|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_44e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Practical3:inst8|lpm_mux9:inst6|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_ele.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|IorD_MUX:inst23|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_84e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Practical3:inst8|Booth_Multiplier:inst4|Booth_Complex_Adder:inst33|lpm_add_sub0:inst2|lpm_add_sub:LPM_ADD_SUB_component" CBX_FILE_NAME="add_sub_9cg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Practical3:inst8|lpm_compare0:inst18|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_1pg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|ALU_Operand2_MUX:inst17|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_a4e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Control_Multi_Cycle:inst12|LPM_ROM:inst|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_t961.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Control_Multi_Cycle:inst12|number_zero_3bit:inst12|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_5e6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Practical3:inst8|Booth_Multiplier:inst4|lpm_mux7:inst35|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_o5e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Practical3:inst8|SUB_8bit:inst10|SCAdder-8bit:inst|lpm_mux10:inst5|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_44e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|number_zero:inst32|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_qf6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|ALU_SRC_MUX:inst13|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_84e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|number_seven:inst14|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_ce6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Memory:inst|LPM_RAM_DQ:inst2|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_64g1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|PCSource_MUX:inst19|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_b4e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Practical3:inst8|Booth_Multiplier:inst4|Booth_Complex_Adder:inst33|lpm_mux6:inst7|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_r5e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Practical3:inst8|Booth_Multiplier:inst4|lpm_compare1:inst9|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_aig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Practical3:inst8|lpm_mux1:inst19|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_q8f.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Practical3:inst8|Booth_Multiplier:inst4|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_4pi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|number_one:inst15|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_rf6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Control_Multi_Cycle:inst12|IS_R_TYPE_MUX:inst9|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_34e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|DataWriteMux:inst11|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_84e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Practical3:inst8|Booth_Multiplier:inst4|lpm_compare1:inst30|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_aig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Practical3:inst8|lpm_mux8:inst5|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_6ne.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|RegisterFile:inst5|lpm_mux0:inst10|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_tle.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Write_Register_MUX:inst27|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_54e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Practical3:inst8|Booth_Multiplier:inst4|lpm_clshift1:inst28|lpm_clshift:LPM_CLSHIFT_component" CBX_FILE_NAME="lpm_clshift_duc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|Practical3:inst8|decode4_16_e:inst2|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_ktf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|RegisterFile:inst5|lpm_decode1:inst21|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_4sf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS_CPU_MULTI_CYCLE|RegisterFile:inst5|lpm_mux0:inst11|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_tle.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

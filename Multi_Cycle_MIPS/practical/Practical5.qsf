@@ -1,0 +1,134 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+# Date created = 13:02:03  March 31, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Practical5_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Arria II GX"
+set_global_assignment -name DEVICE AUTO
+set_global_assignment -name TOP_LEVEL_ENTITY MIPS_CPU_MULTI_CYCLE
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:02:03  MARCH 31, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name BDF_FILE ALU/XOR8bit.bdf
+set_global_assignment -name BDF_FILE "ALU/SUB-8bit.bdf"
+set_global_assignment -name BDF_FILE ALU/SUB_8bit.bdf
+set_global_assignment -name BDF_FILE "ALU/SCAdder-8bit.bdf"
+set_global_assignment -name BDF_FILE ALU/SCADDER_TEST.bdf
+set_global_assignment -name BDF_FILE ALU/SC.bdf
+set_global_assignment -name BDF_FILE ALU/Register17bit.bdf
+set_global_assignment -name BDF_FILE ALU/Register16bit.bdf
+set_global_assignment -name BDF_FILE ALU/Register8bit.bdf
+set_global_assignment -name BDF_FILE ALU/RCadder_4bit.bdf
+set_global_assignment -name BDF_FILE ALU/Practical3.bdf
+set_global_assignment -name BDF_FILE ALU/OR8bit.bdf
+set_global_assignment -name VHDL_FILE ALU/lpm_mux10.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_mux9.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_mux8.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_mux7.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_mux6.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_mux5.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_mux4.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_mux3.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_mux2.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_mux1.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_counter0.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_compare1.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_compare0.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_clshift1.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_clshift0.vhd
+set_global_assignment -name VHDL_FILE ALU/lpm_add_sub0.vhd
+set_global_assignment -name BDF_FILE ALU/FA.bdf
+set_global_assignment -name VHDL_FILE ALU/decode4_16_e.vhd
+set_global_assignment -name BDF_FILE ALU/Booth_Multiplier.bdf
+set_global_assignment -name BDF_FILE ALU/Booth_Complex_Adder.bdf
+set_global_assignment -name BDF_FILE ALU/AND8bit.bdf
+set_global_assignment -name BDF_FILE Memory_RegisterFile/register_8bit.bdf
+set_global_assignment -name VHDL_FILE Memory_RegisterFile/lpm_mux0.vhd
+set_global_assignment -name VHDL_FILE Memory_RegisterFile/lpm_decode1.vhd
+set_global_assignment -name VHDL_FILE Memory_RegisterFile/lpm_decode0.vhd
+set_global_assignment -name BDF_FILE Memory_RegisterFile/RegisterFile.bdf
+set_global_assignment -name BDF_FILE Memory_RegisterFile/InstructionMemory.bdf
+set_global_assignment -name BDF_FILE Memory_RegisterFile/DataMemory.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ALU/Test1.vwf
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "D:/Sharif/Term4/ComputerArchitecture/Tamrin6/Sana/practical/simulation/qsim/" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name QIP_FILE ALU/CU_Decoder.qip
+set_global_assignment -name BDF_FILE Control.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Control_Test.vwf
+set_global_assignment -name BDF_FILE MIPS_CPU.bdf
+set_global_assignment -name QIP_FILE digit_extend_mux.qip
+set_global_assignment -name BDF_FILE Extender.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Extender_Test.vwf
+set_global_assignment -name QIP_FILE write_register_mux.qip
+set_global_assignment -name QIP_FILE DataWriteMux.qip
+set_global_assignment -name QIP_FILE ALU_SRC_MUX.qip
+set_global_assignment -name QIP_FILE SHIFT_LEFT_2.qip
+set_global_assignment -name BDF_FILE Shift_left_two.bdf
+set_global_assignment -name BDF_FILE Shift_Left_1.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Instruction_Memory_Test.vwf
+set_global_assignment -name QIP_FILE CPU_clock_decode.qip
+set_global_assignment -name QIP_FILE CPU_clock_counter.qip
+set_global_assignment -name VECTOR_WAVEFORM_FILE CPU_Test.vwf
+set_global_assignment -name QIP_FILE Branch_MUX.qip
+set_global_assignment -name QIP_FILE number_seven.qip
+set_global_assignment -name QIP_FILE CPU_clock_designer_with_multiply.qip
+set_global_assignment -name QIP_FILE CPU_clock_decoder_with_multiply.qip
+set_global_assignment -name QIP_FILE CPU_clock_designer_13.qip
+set_global_assignment -name BDF_FILE CPU_Clock_Handler.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CPU_Test_fibo.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CPU_Test2.vwf
+set_global_assignment -name BDF_FILE Memory_RegisterFile/Memory.bdf
+set_global_assignment -name QIP_FILE ALU_Operand2_MUX.qip
+set_global_assignment -name QIP_FILE PCSoruce_MUX.qip
+set_global_assignment -name QIP_FILE PCSource_MUX.qip
+set_global_assignment -name BDF_FILE Control_Multi_Cycle.bdf
+set_global_assignment -name BDF_FILE Register_8bit_enable.bdf
+set_global_assignment -name QIP_FILE IorD_MUX.qip
+set_global_assignment -name BDF_FILE MIPS_CPU_MULTI_CYCLE.bdf
+set_global_assignment -name QIP_FILE IS_R_TYPE_MUX.qip
+set_global_assignment -name QIP_FILE number_zero.qip
+set_global_assignment -name QIP_FILE number_zero_3bit.qip
+set_global_assignment -name QIP_FILE CLOCK_ADDER.qip
+set_global_assignment -name QIP_FILE number_zero_24bit.qip
+set_global_assignment -name QIP_FILE number_one_24bit.qip
+set_global_assignment -name VECTOR_WAVEFORM_FILE Memory_test.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

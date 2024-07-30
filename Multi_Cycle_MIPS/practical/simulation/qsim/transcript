@@ -1,0 +1,289 @@
+# do Practical5.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MIPS_CPU_MULTI_CYCLE
+# 
+# Top level modules:
+# 	MIPS_CPU_MULTI_CYCLE
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MIPS_CPU_MULTI_CYCLE_vlg_sample_tst
+# -- Compiling module MIPS_CPU_MULTI_CYCLE_vlg_check_tst
+# -- Compiling module MIPS_CPU_MULTI_CYCLE_vlg_vec_tst
+# 
+# Top level modules:
+# 	MIPS_CPU_MULTI_CYCLE_vlg_vec_tst
+# vsim -L arriaii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.MIPS_CPU_MULTI_CYCLE_vlg_vec_tst 
+# Loading work.MIPS_CPU_MULTI_CYCLE_vlg_vec_tst
+# Loading work.MIPS_CPU_MULTI_CYCLE
+# Loading arriaii_ver.arriaii_io_obuf
+# Loading arriaii_ver.arriaii_io_ibuf
+# Loading arriaii_ver.arriaii_clkena
+# Loading arriaii_ver.arriaii_ena_reg
+# Loading arriaii_ver.arriaii_and2
+# Loading arriaii_ver.arriaii_lcell_comb
+# Loading altera_ver.dffeas
+# Loading arriaii_ver.arriaii_ram_block
+# Loading arriaii_ver.arriaii_ram_register
+# Loading arriaii_ver.arriaii_ram_pulse_generator
+# Loading work.MIPS_CPU_MULTI_CYCLE_vlg_sample_tst
+# Loading work.MIPS_CPU_MULTI_CYCLE_vlg_check_tst
+# Loading altera_ver.PRIM_GDFF_LOW
+# ERROR! Vector Mismatch for output port A[2] :: @time = 1005000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000100
+# ERROR! Vector Mismatch for output port ALU_OUT[1] :: @time = 1005000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000110
+# ERROR! Vector Mismatch for output port ALU_OUT[2] :: @time = 1005000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000110
+# ERROR! Vector Mismatch for output port B[1] :: @time = 1005000.000 ps
+#      Expected value = 00000000
+#      Real value = 00001010
+# ERROR! Vector Mismatch for output port B[3] :: @time = 1005000.000 ps
+#      Expected value = 00000000
+#      Real value = 00001010
+# ERROR! Vector Mismatch for output port Instruction[0] :: @time = 1005000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000010011010001
+# ERROR! Vector Mismatch for output port Instruction[4] :: @time = 1005000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000010011010001
+# ERROR! Vector Mismatch for output port Instruction[6] :: @time = 1005000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000010011010001
+# ERROR! Vector Mismatch for output port Instruction[7] :: @time = 1005000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000010011010001
+# ERROR! Vector Mismatch for output port Instruction[10] :: @time = 1005000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000010011010001
+# ERROR! Vector Mismatch for output port Mem[0] :: @time = 1005000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000010011010001
+# ERROR! Vector Mismatch for output port Mem[4] :: @time = 1005000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000010011010001
+# ERROR! Vector Mismatch for output port Mem[6] :: @time = 1005000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000010011010001
+# ERROR! Vector Mismatch for output port Mem[7] :: @time = 1005000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000010011010001
+# ERROR! Vector Mismatch for output port Mem[10] :: @time = 1005000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000010011010001
+# ERROR! Vector Mismatch for output port PC[2] :: @time = 1005000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000100
+# ERROR! Vector Mismatch for output port Reg1[1] :: @time = 1005000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000110
+# ERROR! Vector Mismatch for output port Reg1[2] :: @time = 1005000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000110
+# ERROR! Vector Mismatch for output port Reg2[1] :: @time = 1005000.000 ps
+#      Expected value = 00000000
+#      Real value = 00001010
+# ERROR! Vector Mismatch for output port Reg2[3] :: @time = 1005000.000 ps
+#      Expected value = 00000000
+#      Real value = 00001010
+# ERROR! Vector Mismatch for output port A[1] :: @time = 1110000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000110
+# ERROR! Vector Mismatch for output port ALUOp[2] :: @time = 1110000.000 ps
+#      Expected value = 0000
+#      Real value = 0100
+# ERROR! Vector Mismatch for output port RegDst[0] :: @time = 1140000.000 ps
+#      Expected value = 00
+#      Real value = 01
+# ERROR! Vector Mismatch for output port ALU_OUT[3] :: @time = 1170000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port ALU_OUT[4] :: @time = 1170000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port ALU_OUT[5] :: @time = 1170000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port ALU_OUT[6] :: @time = 1170000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port ALU_OUT[7] :: @time = 1170000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port ALUOp[0] :: @time = 1170000.000 ps
+#      Expected value = 0000
+#      Real value = 0011
+# ERROR! Vector Mismatch for output port ALUOp[1] :: @time = 1170000.000 ps
+#      Expected value = 0000
+#      Real value = 0011
+# ERROR! Vector Mismatch for output port ALUSrcB[0] :: @time = 1170000.000 ps
+#      Expected value = 00
+#      Real value = 01
+# ERROR! Vector Mismatch for output port B[0] :: @time = 1170000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000001
+# ERROR! Vector Mismatch for output port A[0] :: @time = 1200000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000101
+# ERROR! Vector Mismatch for output port PC[0] :: @time = 1200000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000101
+# ERROR! Vector Mismatch for output port Reg1[3] :: @time = 1200000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port Reg1[4] :: @time = 1200000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port Reg1[5] :: @time = 1200000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port Reg1[6] :: @time = 1200000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port Reg1[7] :: @time = 1200000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port ALU_OUT[0] :: @time = 1230000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000101
+# ERROR! Vector Mismatch for output port Mem[1] :: @time = 1230000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000010011010010
+# ERROR! Vector Mismatch for output port Instruction[1] :: @time = 1260000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000010011010010
+# ERROR! Vector Mismatch for output port A[3] :: @time = 1320000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port A[4] :: @time = 1320000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port A[5] :: @time = 1320000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port A[6] :: @time = 1320000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port A[7] :: @time = 1320000.000 ps
+#      Expected value = 00000000
+#      Real value = 11111100
+# ERROR! Vector Mismatch for output port PC[1] :: @time = 1410000.000 ps
+#      Expected value = 00000000
+#      Real value = 00000110
+# ERROR! Vector Mismatch for output port Mem[2] :: @time = 1440000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000010011010100
+# ERROR! Vector Mismatch for output port Instruction[2] :: @time = 1470000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000010011010100
+# ERROR! Vector Mismatch for output port PC[3] :: @time = 2070000.000 ps
+#      Expected value = 00000000
+#      Real value = 00001000
+# ERROR! Vector Mismatch for output port PC[5] :: @time = 2850000.000 ps
+#      Expected value = 00000000
+#      Real value = 01100100
+# ERROR! Vector Mismatch for output port PC[6] :: @time = 2850000.000 ps
+#      Expected value = 00000000
+#      Real value = 01100100
+# ERROR! Vector Mismatch for output port PCSource[0] :: @time = 2850000.000 ps
+#      Expected value = 00
+#      Real value = 11
+# ERROR! Vector Mismatch for output port PCSource[1] :: @time = 2850000.000 ps
+#      Expected value = 00
+#      Real value = 11
+# ERROR! Vector Mismatch for output port Mem[5] :: @time = 2880000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0010010011100111
+# ERROR! Vector Mismatch for output port Mem[13] :: @time = 2880000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0010010011100111
+# ERROR! Vector Mismatch for output port Instruction[5] :: @time = 2910000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0010010011100111
+# ERROR! Vector Mismatch for output port Instruction[13] :: @time = 2910000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0010010011100111
+# ERROR! Vector Mismatch for output port ALUSrcB[1] :: @time = 2970000.000 ps
+#      Expected value = 00
+#      Real value = 10
+# ERROR! Vector Mismatch for output port B[2] :: @time = 2970000.000 ps
+#      Expected value = 00000000
+#      Real value = 11100111
+# ERROR! Vector Mismatch for output port B[5] :: @time = 2970000.000 ps
+#      Expected value = 00000000
+#      Real value = 11100111
+# ERROR! Vector Mismatch for output port B[6] :: @time = 2970000.000 ps
+#      Expected value = 00000000
+#      Real value = 11100111
+# ERROR! Vector Mismatch for output port B[7] :: @time = 2970000.000 ps
+#      Expected value = 00000000
+#      Real value = 11100111
+# ERROR! Vector Mismatch for output port Reg2[0] :: @time = 3060000.000 ps
+#      Expected value = 00000000
+#      Real value = 01001011
+# ERROR! Vector Mismatch for output port Reg2[6] :: @time = 3060000.000 ps
+#      Expected value = 00000000
+#      Real value = 01001011
+# ERROR! Vector Mismatch for output port Mem[9] :: @time = 3090000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0011011011010001
+# ERROR! Vector Mismatch for output port Mem[12] :: @time = 3090000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0011011011010001
+# ERROR! Vector Mismatch for output port Instruction[9] :: @time = 3120000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0011011011010001
+# ERROR! Vector Mismatch for output port Instruction[12] :: @time = 3120000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0011011011010001
+# ERROR! Vector Mismatch for output port Reg1[0] :: @time = 3150000.000 ps
+#      Expected value = 00000000
+#      Real value = 01001011
+# ERROR! Vector Mismatch for output port B[4] :: @time = 3180000.000 ps
+#      Expected value = 00000000
+#      Real value = 00010001
+# ERROR! Vector Mismatch for output port Reg2[4] :: @time = 3270000.000 ps
+#      Expected value = 00000000
+#      Real value = 00111010
+# ERROR! Vector Mismatch for output port Reg2[5] :: @time = 3270000.000 ps
+#      Expected value = 00000000
+#      Real value = 00111010
+# ERROR! Vector Mismatch for output port Mem[14] :: @time = 3300000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0100011011100101
+# ERROR! Vector Mismatch for output port Instruction[14] :: @time = 3330000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0100011011100101
+# ERROR! Vector Mismatch for output port Mem[3] :: @time = 3510000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0101011011001010
+# ERROR! Vector Mismatch for output port Instruction[3] :: @time = 3540000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0101011011001010
+# ERROR! Vector Mismatch for output port Mem[15] :: @time = 4170000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 1000000011000100
+# ERROR! Vector Mismatch for output port Instruction[15] :: @time = 4200000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 1000000011000100
+# ERROR! Vector Mismatch for output port PC[4] :: @time = 4680000.000 ps
+#      Expected value = 00000000
+#      Real value = 00010100
+# ERROR! Vector Mismatch for output port Mem[11] :: @time = 4770000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000111000111000
+# ERROR! Vector Mismatch for output port Instruction[11] :: @time = 4800000.000 ps
+#      Expected value = 0000000000000000
+#      Real value = 0000111000111000
+# ERROR! Vector Mismatch for output port Reg2[2] :: @time = 5160000.000 ps
+#      Expected value = 00000000
+#      Real value = 01010100
+# ERROR! Vector Mismatch for output port Reg2[7] :: @time = 5370000.000 ps
+#      Expected value = 00000000
+#      Real value = 10101000
+#          85 mismatched vectors : Simulation failed !
+# ** Note: $finish    : CPU_Test.vwf.vt(2322)
+#    Time: 10 us  Iteration: 0  Instance: /MIPS_CPU_MULTI_CYCLE_vlg_vec_tst/tb_out
