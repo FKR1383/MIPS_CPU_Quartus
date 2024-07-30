@@ -16,10 +16,15 @@ This is our practices in Computer architecture course at Sharif University of Te
 We first make ALU and memory blocks. Then, we make Single cycle, multi cycle and pipelines version of MIPS CPU. at last we make a branch predictor for pipeline version.
 The CPUs support these instructions (ISA):
 ![image](https://github.com/user-attachments/assets/09005ff1-b11d-40d3-b798-51ec070f3fbd)
+
 ![image](https://github.com/user-attachments/assets/474115a9-d805-41dd-b06e-09aad22916a7)
+
 ![image](https://github.com/user-attachments/assets/2cd3dc70-e7f4-4c30-892a-b952b6b56348)
+
 ![image](https://github.com/user-attachments/assets/2785305a-ae05-4277-aa7c-2b8e186e9c2b)
+
 ![image](https://github.com/user-attachments/assets/25974ce5-c453-4135-bccf-f14d93813385)
+
 ![image](https://github.com/user-attachments/assets/dbff4a5a-9bb0-48c2-ac1c-8fc94ef8029a)
 
 
